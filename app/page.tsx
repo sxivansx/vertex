@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Hero from "@/components/Hero.tsx";
 
 export default function Home() {
   return (
@@ -6,6 +7,9 @@ export default function Home() {
       <h1>
         vertex-website
       </h1>
+      <div>
+        <Hero />
+      </div>
     </div>
   );
 }
