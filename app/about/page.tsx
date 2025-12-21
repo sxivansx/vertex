@@ -1,8 +1,12 @@
-import React from 'react'
+import Leads from '@/components/Leads.jsx'
 
 function page() {
   return (
-    <div>page</div>
+    <div>
+        <Leads />
+
+    </div>
+    
   )
 }
 
