@@ -5,7 +5,7 @@ import { Highlighter } from "@/components/ui/highlighter"
 function hero() {
   return (
     <div className="relative h-[800px] w-full overflow-hidden text-white flex min-h-screen items-center justify-center border-b border-white/10 px-6 py-24">
-        <DotPattern className='opacity-20' />
+        <DotPattern glow={true} className='opacity-70' />
             <div className='overflow'>
                 <div>
                 <h1 className='text-5xl md:text-7xl font-bold mb-6  text-center'>

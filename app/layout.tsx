@@ -10,8 +10,8 @@ const geistSans = Google_Sans_Flex({
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geistMono = Google_Sans_Flex({
+  variable: "--font-google_sans_flex-medium",
   subsets: ["latin"],
 });
 
