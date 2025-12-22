@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Google_Sans_Flex } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Google_Sans_Flex } from 'next/font/google'
 
-const geistSans = Google_Sans_Flex({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Google_Sans_Flex({
-  variable: "--font-google_sans_flex-medium",
+const googleSansFlex = Google_Sans_Flex({
+  variable: "--font-google-sans-flex",
   subsets: ["latin"],
 });
 
@@ -28,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={'${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen'}
+        className={`${googleSansFlex.variable} antialiased flex flex-col min-h-screen font-sans`}
       >
         <Navbar className="flex-grow"/>
         {children}

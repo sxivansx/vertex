@@ -10,12 +10,12 @@ import {
 
 function Domains() {
   return (
-    <section className="w-full border-t border-white/10">
+    <section className="border-t border-white/10 max-w-[1200px] ">
       <div className="flex flex-col mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 border-l border-r border-b border-white/10">
 
         {/* Left Content */}
-        <div className="justify-center gap-4 p-10 md:p-14">
-          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+        <div className="justify-center gap-6 p-10 md:p-14">
+          <h2 className="text-3xl font-semibold tracking-tight pb-4 text-white sm:text-4xl">
             The many sides of Vertex — one community.
           </h2>
 

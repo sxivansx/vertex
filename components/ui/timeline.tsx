@@ -1,6 +1,5 @@
 "use client";
 import {
-  useMotionValueEvent,
   useScroll,
   useTransform,
   motion,
@@ -19,8 +18,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
   useEffect(() => {
     if (ref.current) {
-      const rect = ref.current.getBoundingClientRect();
-      setHeight(rect.height);
+      setHeight(ref.current.getBoundingClientRect().height);
     }
   }, []);
 
@@ -35,16 +33,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   return (
     <div
       ref={containerRef}
-      className="w-full bg-black font-sans"
+      className="relative w-full bg-black font-sans"
     >
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-20">
+      <div ref={ref} className="relative max-w-7xl mx-auto pb-12">
         {data.map((item, index) => (
           <div
             key={index}
-            className="flex justify-start pt-10 md:pt-40 md:gap-10"
+            className="flex justify-start pt-6 md:pt-16 md:gap-10"
           >
-            {/* Sticky Title */}
-            <div className="sticky top-40 z-40 flex items-center self-start max-w-xs lg:max-w-sm md:w-full">
+            {/* Title + Dot */}
+            <div className="relative z-40 flex items-center self-start max-w-xs lg:max-w-sm md:w-full">
               <div className="h-10 w-10 absolute left-3 flex items-center justify-center rounded-full bg-black">
                 <div className="h-4 w-4 rounded-full bg-neutral-800 border border-neutral-600" />
               </div>
@@ -60,7 +58,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
                 {item.title}
               </h3>
 
-              <div className="text-white leading-relaxed">
+              <div className="leading-relaxed">
                 {item.content}
               </div>
             </div>
@@ -69,7 +67,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
 
         {/* Timeline line */}
         <div
-          style={{ height: `${height}px` }}
+          style={{ height }}
           className="absolute left-8 top-0 w-[2px] overflow-hidden
             bg-gradient-to-b from-transparent via-neutral-700 to-transparent
             [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
@@ -80,7 +78,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               opacity: opacityTransform,
             }}
             className="absolute inset-x-0 top-0 w-[2px]
-              bg-gradient-to-t from-purple-500 via-blue-500 to-transparent
+              bg-gradient-to-t from-blue-600 via-blue-500 to-transparent
               rounded-full"
           />
         </div>

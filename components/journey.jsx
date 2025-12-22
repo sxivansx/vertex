@@ -49,9 +49,7 @@ function Journey() {
           <p className="mb-8 text-xs font-normal text-white/70 md:text-sm">
             Vertex begins as a departmental initiative within the Electronics
             and Telecommunication Engineering department.
-          </p>
 
-          <p className="mb-8 text-xs font-normal text-white/70 md:text-sm">
             The early phase focused on learning, collaboration, and forming a
             core team driven by curiosity and innovation.
           </p>
@@ -79,19 +77,7 @@ function Journey() {
 
           <div className="mb-8 space-y-2">
             <div className="text-xs md:text-sm text-white/70">
-              ✅ Formation of the core Vertex team
-            </div>
-            <div className="text-xs md:text-sm text-white/70">
-              ✅ Launch of technical and cultural initiatives
-            </div>
-            <div className="text-xs md:text-sm text-white/70">
-              ✅ Expansion into media, content, and sports domains
-            </div>
-            <div className="text-xs md:text-sm text-white/70">
-              ✅ Growing participation and student involvement
-            </div>
-            <div className="text-xs md:text-sm text-white/70">
-              ✅ Building a strong and inclusive campus community
+              Over time, Vertex took shape through consistent effort and collaboration — starting with a small core team, gradually introducing technical and cultural initiatives, and expanding into media, content, sports, and organizing. With growing participation and shared ownership, the club evolved into an inclusive community driven by students and their collective energy.
             </div>
           </div>
 
@@ -110,8 +96,8 @@ function Journey() {
   ]
 
   return (
-    <div>
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 border-l border-r border-b border-white/10 p-8">
+    <div className="border-b border-l border-r border-white/10 max-w-[1200px]">
+      <div className="flex mx-auto grid max-w-7xl grid-cols-1 gap-12 border-l border-r border-b border-white/10 p-8 max-w-200px ">
         <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           From an idea to a growing community
         </h2>
