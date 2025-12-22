@@ -11,7 +11,7 @@ function hero() {
                 <h1 className='text-5xl md:text-7xl font-bold mb-6  text-center'>
                 The Official Student Club of 
                 {" "}
-                <Highlighter action="highlight" color="#87CEFA">
+                <Highlighter action="highlight" color="#011a27ff">
                 Electronics & Telecommunication 
                 </Highlighter>{" "}
                 </h1>
