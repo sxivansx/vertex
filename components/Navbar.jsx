@@ -11,7 +11,7 @@ const navItems = [
 
 function navbar() {
 return (
-    <header className="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out text-white bg-black/80 backdrop-blur-sm">
+    <header className="fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out text-white  backdrop-blur-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
             <div className="flex items-center h-16">
                 <Logo />

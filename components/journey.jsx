@@ -1,4 +1,3 @@
-import React from "react"
 import { Timeline } from "@/components/ui/timeline"
 
 function Journey() {
@@ -96,8 +95,8 @@ function Journey() {
   ]
 
   return (
-    <div className="border-b border-l border-r border-white/10 max-w-[1200px]">
-      <div className="flex mx-auto grid max-w-7xl grid-cols-1 gap-12 border-l border-r border-b border-white/10 p-8 max-w-200px ">
+    <div>
+      <div className="flex mx-auto grid max-w-7xl grid-cols-1 gap-12 p-8">
         <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
           From an idea to a growing community
         </h2>

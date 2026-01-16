@@ -10,8 +10,8 @@ import {
 
 function Domains() {
   return (
-    <section className="border-t border-white/10 max-w-[1200px] ">
-      <div className="flex flex-col mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2 border-l border-r border-b border-white/10">
+    <section className="max-w-[1200px]">
+      <div className="flex flex-col mx-auto grid max-w-7xl grid-cols-1 md:grid-cols-2">
 
         {/* Left Content */}
         <div className="justify-center gap-6 p-10 md:p-14">
@@ -30,34 +30,34 @@ function Domains() {
         </div>
 
         {/* Right Marquee */}
-        <div className="justify-center gap-4 relative overflow-hidden border-t md:border-t-0 md:border-l border-white/10">
+        <div className="justify-center gap-4 relative overflow-hidden">
           <Marquee pauseOnHover className="gap-4 py-4">
-            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E] border border-white/10">
+            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E]">
               <FiMusic className="text-purple-400" />
               <span className="text-white font-medium">Cultural</span>
             </span>
 
-            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E] border border-white/10">
+            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E]">
               <FiCamera className="text-pink-400" />
               <span className="text-white font-medium">Media</span>
             </span>
 
-            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E] border border-white/10">
+            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E]">
               <FiCpu className="text-cyan-400" />
               <span className="text-white font-medium">Technical</span>
             </span>
 
-            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E] border border-white/10">
+            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E]">
               <FiEdit3 className="text-yellow-400" />
               <span className="text-white font-medium">Content</span>
             </span>
 
-            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E] border border-white/10">
+            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E]">
               <FiClipboard className="text-orange-400" />
               <span className="text-white font-medium">Organizing</span>
             </span>
 
-            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E] border border-white/10">
+            <span className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#08070E]">
               <FiActivity className="text-green-400" />
               <span className="text-white font-medium">Sports</span>
             </span>
