@@ -95,23 +95,28 @@ function Journey() {
   ]
 
   return (
-    <div>
-      <div className="flex mx-auto grid max-w-7xl grid-cols-1 gap-12 p-8">
-        <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-          From an idea to a growing community
-        </h2>
-        <p className="text-white/70">
-          Vertex started as a simple idea — to give students a space beyond
-          academics. Over time, it grew into a collaborative club bringing
-          together technology, culture, sports, and leadership through shared
-          experiences and learning.
-        </p>
+    <section className="w-full px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-12 max-w-2xl">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-white/30">
+            Our story
+          </p>
+          <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            From an idea to a growing community
+          </h2>
+          <p className="mt-4 leading-relaxed text-white/50">
+            Vertex started as a simple idea — to give students a space beyond
+            academics. Over time, it grew into a collaborative club bringing
+            together technology, culture, sports, and leadership through shared
+            experiences and learning.
+          </p>
+        </div>
       </div>
 
       <div className="relative w-full overflow-clip">
         <Timeline data={data} />
       </div>
-    </div>
+    </section>
   )
 }
 

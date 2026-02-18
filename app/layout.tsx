@@ -24,7 +24,7 @@ export default function RootLayout({
       <body
         className={`${googleSansFlex.variable} antialiased flex flex-col min-h-screen font-sans`}
       >
-        <Navbar className="flex-grow"/>
+        <Navbar />
         {children}
         <Footer/>
       </body>

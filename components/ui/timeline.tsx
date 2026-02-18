@@ -1,9 +1,5 @@
 "use client";
-import {
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
+import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -31,57 +27,52 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full bg-black font-sans"
-    >
-      <div ref={ref} className="relative max-w-7xl mx-auto pb-12">
+    <div ref={containerRef} className="relative w-full">
+      <div
+        ref={ref}
+        className="relative mx-auto max-w-7xl px-4 pb-16 sm:px-6 lg:px-8"
+      >
         {data.map((item, index) => (
-          <div
-            key={index}
-            className="flex justify-start pt-6 md:pt-16 md:gap-10"
-          >
-            {/* Title + Dot */}
-            <div className="relative z-40 flex items-center self-start max-w-xs lg:max-w-sm md:w-full">
-              <div className="h-10 w-10 absolute left-3 flex items-center justify-center rounded-full bg-black">
-                <div className="h-4 w-4 rounded-full bg-neutral-800 border border-neutral-600" />
-              </div>
+          <div key={index} className="flex gap-6 pt-8 md:gap-10 md:pt-12">
 
-              <h3 className="hidden md:block md:pl-20 text-5xl font-bold text-white">
+            {/* Dot + desktop title */}
+            <div className="relative z-40 flex shrink-0 flex-col items-center md:flex-row md:items-start">
+              <div className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 bg-white/[0.05]">
+                <div className="h-2.5 w-2.5 rounded-full bg-white/50" />
+              </div>
+              <h3 className="hidden whitespace-nowrap self-center pl-6 text-xl font-semibold text-white md:block">
                 {item.title}
               </h3>
             </div>
 
-            {/* Content */}
-            <div className="relative pl-20 pr-4 md:pl-4 w-full text-white">
-              <h3 className="md:hidden mb-4 text-2xl font-bold text-white">
+            {/* Content card */}
+            <div className="w-full pb-8">
+              <h3 className="mb-4 text-xl font-semibold text-white md:hidden">
                 {item.title}
               </h3>
-
-              <div className="leading-relaxed">
+              <div className="rounded-2xl border border-white/[0.08] bg-white/[0.03] p-5 sm:p-6">
                 {item.content}
               </div>
             </div>
+
           </div>
         ))}
 
-        {/* Timeline line */}
+        {/* Vertical line — positioned at dot center per breakpoint */}
         <div
           style={{ height }}
-          className="absolute left-8 top-0 w-[2px] overflow-hidden
-            bg-gradient-to-b from-transparent via-neutral-700 to-transparent
-            [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]"
+          className="absolute left-9 top-0 w-[2px] overflow-hidden
+            bg-gradient-to-b from-transparent via-white/10 to-transparent
+            [mask-image:linear-gradient(to_bottom,transparent_0%,black_10%,black_90%,transparent_100%)]
+            sm:left-11 lg:left-[52px]"
         >
           <motion.div
-            style={{
-              height: heightTransform,
-              opacity: opacityTransform,
-            }}
-            className="absolute inset-x-0 top-0 w-[2px]
-              bg-gradient-to-t from-blue-600 via-blue-500 to-transparent
-              rounded-full"
+            style={{ height: heightTransform, opacity: opacityTransform }}
+            className="absolute inset-x-0 top-0 w-[2px] rounded-full
+              bg-gradient-to-t from-purple-500 via-cyan-400 to-transparent"
           />
         </div>
+
       </div>
     </div>
   );

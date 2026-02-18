@@ -141,3 +141,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+html {
+  background-color: #0a0a0a;
+  color-scheme: dark;
+}
+
+canvas {
+  image-rendering: auto;
+}

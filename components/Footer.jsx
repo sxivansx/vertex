@@ -3,8 +3,8 @@ import Logo from "./Logo.jsx"
 
 function Footer() {
   return (
-    <div className= 'bottom-0 w-full bg-black border-t border-white/10'>
-        <div className="flex items-center justify-between px-8 py-8">
+    <div className='bottom-0 w-full bg-black border-t border-white/10'>
+        <div className="flex flex-col items-center gap-6 px-6 py-8 sm:flex-row sm:justify-between sm:px-8">
         <div>
             <Logo/>
         </div>
